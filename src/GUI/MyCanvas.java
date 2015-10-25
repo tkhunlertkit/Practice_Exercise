@@ -22,8 +22,8 @@ public class MyCanvas {
 
 
     private final int MAX_INCORRECT = 5;
-    private final int QUESTION_GOAL = 100;
-    private final String PASS = "Proper Fiber Sale";
+    private final int QUESTION_GOAL = 60;
+    private final String PASS = "Going Trinity";
     private final int INITIAL_MAX_RANDOM_RANGE = 5;
     private final int NUM_CHARS_ANSWER = 5;
     private final int calcTimer = 1000;

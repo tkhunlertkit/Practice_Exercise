@@ -3,7 +3,7 @@ package Algorithm;
 public abstract class MyAlgorithm {
 
 	private final int SUBTRACTION_WEIGHT = 1;
-	private final int PERCENTAGE_WEIGHT = 0;
+	private final int PERCENTAGE_WEIGHT = 3;
 	private final double TOTAL_WEIGHT = SUBTRACTION_WEIGHT + PERCENTAGE_WEIGHT;
 
 	private double subtractRatio = SUBTRACTION_WEIGHT / TOTAL_WEIGHT;
