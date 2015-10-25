@@ -26,6 +26,7 @@ public class MyCanvas {
     private final String PASS = "Proper Fiber Sale";
     private final int INITIAL_MAX_RANDOM_RANGE = 5;
     private final int NUM_CHARS_ANSWER = 5;
+    private final int calcTimer = 1000;
 
     private STATE s = STATE.IN_GAME;
     private CORRECTNESS correctnessFlag = CORRECTNESS.CORRECT;
@@ -52,8 +53,7 @@ public class MyCanvas {
     private String answer = "";
     private String incorrectScoreText = "Incorrect: 0/5";
     private MyAlgorithm operation = new Subtraction();
-    private Timer t = new Timer(2000, new CalculatorPrevention(this));
-
+    private CalculatorPrevention c = new CalculatorPrevention(this, calcTimer);
     public MyCanvas() {
         mainFrame = new Frame();
         mainFrame.setLayout(new BorderLayout());
@@ -113,7 +113,7 @@ public class MyCanvas {
                 s = STATE.CAL_WARNING_FLAG;
             }
             System.out.println("Timer started");
-            t.start();
+            c.startTimer();
         }
        
         ans.requestFocus();
@@ -156,7 +156,7 @@ public class MyCanvas {
                 incorrectScore = 0;
                 maxRandomRange = INITIAL_MAX_RANDOM_RANGE;
             }
-            t.stop();
+            c.stop();
             setUpQuestion();
         }
     }
@@ -308,7 +308,7 @@ public class MyCanvas {
                             + ")";
                 }
                 s = STATE.IN_GAME;
-                t.stop();
+                c.stop();
                 if (incorrectScore > MAX_INCORRECT) {
                     numQuestionSoFar = 0;
                     incorrectScore = 0;

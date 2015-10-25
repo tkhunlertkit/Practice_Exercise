@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import javax.swing.Timer;
+
 import GUI.MyCanvas;
 import GUI.STATE;
 
@@ -16,9 +18,11 @@ import GUI.STATE;
 public class CalculatorPrevention implements ActionListener {
 
     private MyCanvas m;
+	private Timer t;
 
-    public CalculatorPrevention(MyCanvas myCanvas) {
+    public CalculatorPrevention(MyCanvas myCanvas, int millisec) {
         m = myCanvas;
+        t = new Timer(1000, this);
     }
 
 
@@ -70,7 +74,7 @@ public class CalculatorPrevention implements ActionListener {
                 if (line.toLowerCase().contains("calc")) {
                     System.out.println(os);
                     System.out.println(line);
-                    String[] s = line.trim().split(" ");
+                    String[] s = line.trim().split(" +");
                     System.out.println(s[0] + " " + s[1]);
                     calcPID = os.contains("win") ? Integer.parseInt(s[1]) : Integer.parseInt(s[0]);
                     System.out.println("Search for PID found with PID = " + calcPID);
@@ -91,6 +95,14 @@ public class CalculatorPrevention implements ActionListener {
         if (getCalcPID() == -1) {
             executeCommand(CalculatorOperation.OPEN_CALC);
         }
+    }
+    
+    public void startTimer() {
+    	t.start();
+    }
+    
+    public void stop() {
+    	t.stop();
     }
 
     @Override
