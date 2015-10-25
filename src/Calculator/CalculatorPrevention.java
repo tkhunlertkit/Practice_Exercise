@@ -1,4 +1,4 @@
-package GUI;
+package Calculator;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -6,6 +6,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
+import GUI.MyCanvas;
+import GUI.STATE;
 
 /**
  * Created by Tanawat Khunlertkit on 8/24/15.

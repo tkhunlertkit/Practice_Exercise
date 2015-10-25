@@ -1,6 +1,6 @@
 package Algorithm;
 
-import GUI.CalculatorPrevention;
+import Calculator.CalculatorPrevention;
 
 public class Subtraction extends MyAlgorithm {
 

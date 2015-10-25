@@ -1,6 +1,6 @@
 package Algorithm;
 
-import GUI.CalculatorPrevention;
+import Calculator.CalculatorPrevention;
 
 public class Percentage extends MyAlgorithm {
 
@@ -9,7 +9,7 @@ public class Percentage extends MyAlgorithm {
 
 	@Override
 	public String generateQuestion(int max) {
-		clearPercentState();
+		super.clearPercentState();
 		String question;
 		double answer, original, finalValue;
 		int randPercent;
