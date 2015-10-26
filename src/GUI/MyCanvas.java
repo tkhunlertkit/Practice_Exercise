@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class MyCanvas {
 
-
+	private final String TITLE = "Practice Exercise";
     private final int MAX_INCORRECT = 5;
     private final int QUESTION_GOAL = 60;
     private final String PASS = "Going Trinity";
@@ -56,6 +56,7 @@ public class MyCanvas {
     private CalculatorPrevention c = new CalculatorPrevention(this, calcTimer);
     public MyCanvas() {
         mainFrame = new Frame();
+        mainFrame.setTitle(TITLE);
         mainFrame.setLayout(new BorderLayout());
         mainFrame.setSize(750, 500);
         mainFrame.add(controlPanel, BorderLayout.CENTER);
