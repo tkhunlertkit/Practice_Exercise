@@ -18,7 +18,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MyCanvas {
+public class MyFrame {
 
 	private final String TITLE = "Practice Exercise";
     private final int MAX_INCORRECT = 5;
@@ -54,7 +54,7 @@ public class MyCanvas {
     private String incorrectScoreText = "Incorrect: 0/5";
     private MyAlgorithm operation = new Subtraction();
     private CalculatorPrevention c = new CalculatorPrevention(this, calcTimer);
-    public MyCanvas() {
+    public MyFrame() {
         mainFrame = new Frame();
         mainFrame.setTitle(TITLE);
         mainFrame.setLayout(new BorderLayout());

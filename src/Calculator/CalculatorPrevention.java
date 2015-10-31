@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 
 import javax.swing.Timer;
 
-import GUI.MyCanvas;
+import GUI.MyFrame;
 import GUI.STATE;
 
 /**
@@ -17,10 +17,10 @@ import GUI.STATE;
  */
 public class CalculatorPrevention implements ActionListener {
 
-    private MyCanvas m;
+    private MyFrame m;
 	private Timer t;
 
-    public CalculatorPrevention(MyCanvas myCanvas, int millisec) {
+    public CalculatorPrevention(MyFrame myCanvas, int millisec) {
         m = myCanvas;
         t = new Timer(1000, this);
     }
