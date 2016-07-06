@@ -54,7 +54,7 @@ public abstract class MyAlgorithm {
 		} else if (randQuestion < percentRatio) {
 			return new Percentage();
 		} else if (randQuestion < fractionRatio) {
-			return new Fraction();
+			return new FractionQuestion();
 		} else {
 			// default
 			return new Percentage();
