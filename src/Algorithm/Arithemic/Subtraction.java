@@ -1,5 +1,7 @@
-package Algorithm;
+package Algorithm.Arithemic;
 
+import Algorithm.MyAlgorithm;
+import Algorithm.QuestionState;
 import Calculator.CalculatorPrevention;
 
 public class Subtraction extends MyAlgorithm {
@@ -26,6 +28,16 @@ public class Subtraction extends MyAlgorithm {
 		super.setParameter(question, ans);
         CalculatorPrevention.closeCalculator();
 		return question;
+	}
+
+	@Override
+	public String toLatexFormat() {
+		return "";
+	}
+
+	@Override
+	public String getAnswerLatex() {
+		return super.getAnswer() + "";
 	}
 
 }

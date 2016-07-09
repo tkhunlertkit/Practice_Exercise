@@ -1,5 +1,7 @@
-package Algorithm;
+package Algorithm.Arithemic;
 
+import Algorithm.MyAlgorithm;
+import Algorithm.QuestionState;
 import Calculator.CalculatorPrevention;
 
 public class FractionQuestion extends MyAlgorithm {
@@ -59,7 +61,17 @@ public class FractionQuestion extends MyAlgorithm {
 		System.out.println(answer);
 		return question;
 	}
-	
+
+	@Override
+	public String toLatexFormat() {
+		return "";
+	}
+
+	@Override
+	public String getAnswerLatex() {
+		return super.getAnswer() + "";
+	}
+
 	private String getQuestionString(int x[], int y[], String op) {
 		String q = "";
 		q += "{"; 

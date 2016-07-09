@@ -1,38 +1,18 @@
 package GUI;
 
-import java.awt.BorderLayout;
-import java.awt.Canvas;
-import java.awt.Checkbox;
-import java.awt.CheckboxGroup;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.FontMetrics;
-import java.awt.Frame;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.GridLayout;
-import java.awt.Panel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import Algorithm.MyAlgorithm;
+import Algorithm.QuestionState;
+import Algorithm.Arithemic.Subtraction;
+import Calculator.CalculatorPrevention;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 import java.awt.font.TextAttribute;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-
-import Algorithm.MyAlgorithm;
-import Algorithm.QuestionState;
-import Algorithm.Subtraction;
-import Calculator.CalculatorPrevention;
 
 public class MyCanvas {
 
@@ -74,6 +54,7 @@ public class MyCanvas {
     private String incorrectScoreText = "Incorrect: 0/5";
     private MyAlgorithm operation = new Subtraction();
     private CalculatorPrevention c = new CalculatorPrevention(this, calcTimer);
+
     public MyCanvas() {
         mainFrame = new Frame();
         mainFrame.setTitle(TITLE);
