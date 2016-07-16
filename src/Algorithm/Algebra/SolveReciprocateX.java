@@ -50,13 +50,13 @@ public class SolveReciprocateX extends MyAlgorithm {
     }
 
     public String toLatexFormat() {
-        String res = a.toLatexFormat() + "x^{-1} = " + b.toLatexFormat() + "x^{-1} + " + c.toLatexFormat();
+        String res = "$" + a.toLatexFormat() + "x^{-1} = " + b.toLatexFormat() + "x^{-1} + " + c.toLatexFormat() + "$";
         return res;
     }
 
     @Override
     public String getAnswerLatex() {
-        return "x = " + answer;
+        return "$x = " + answer + "$";
     }
 
     public static void main(String[] args) {

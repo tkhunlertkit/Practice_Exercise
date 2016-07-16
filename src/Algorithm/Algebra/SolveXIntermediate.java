@@ -59,20 +59,20 @@ public class SolveXIntermediate extends MyAlgorithm {
     }
 
     public String toLatexFormat() {
-        String res = "";
+        String res = "$";
         for (int i=0; i<a.length; i++) {
             if (i > 0) {
                 res += " + ";
             }
             res += a[i].toLatexFormat()+ "(" + b[i].toLatexFormat() + "x + " + c[i].toLatexFormat() + ")";
         }
-        res += " = " + d.toLatexFormat();
+        res += " = " + d.toLatexFormat() + "$";
         return res;
     }
 
     @Override
     public String getAnswerLatex() {
-        return "x = " + answer;
+        return "$x = " + answer + "$";
     }
 
     public static void main(String[] args) {

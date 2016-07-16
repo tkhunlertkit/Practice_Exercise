@@ -35,7 +35,7 @@ public class SolveXSimple extends MyAlgorithm {
         a = new Fraction[numTerms];
         b = new Fraction[numTerms];
         c = new Fraction(0);
-        question = "";
+        question = "$";
 
         for (int i=0; i<numTerms; i++) {
             if (i > 0) {
@@ -51,27 +51,27 @@ public class SolveXSimple extends MyAlgorithm {
             question += "(" + a[i].toString() + " * x + " + b[i].toString() + ")";
         }
 
-        question += " = " + c.toString();
+        question += " = " + c.toString() + "$";
         answer = x;
         super.setParameter(question, answer);
         return question;
     }
 
     public String toLatexFormat() {
-        String res = "";
+        String res = "$";
         for (int i=0; i<a.length; i++) {
             if (i > 0) {
                 res += " + ";
             }
             res += "(" + a[i].toLatexFormat()+ "x + " + b[i].toLatexFormat() + ")";
         }
-        res += " = " + c.toLatexFormat();
+        res += " = " + c.toLatexFormat() + "$";
         return res;
     }
 
     @Override
     public String getAnswerLatex() {
-        return "x = " + answer;
+        return "$x = " + answer + "$";
     }
 
     public List<Fraction> getA() {

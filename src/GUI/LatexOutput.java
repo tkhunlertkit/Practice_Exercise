@@ -69,9 +69,9 @@ public class LatexOutput {
         pw.write("\t\t\\begin{minipage}[t][\\textheight]{\\linewidth}\n");
         for (int i=1; i<=QUESTION_PER_COL; i++) {
             int questionNum = startQuestion + i;
-            pw.write("\t\t\t" + questionNum + ". $" + problems.get(questionNum-1).toLatexFormat() + "$\\\\\n");
+            pw.write("\t\t\t" + questionNum + ". " + problems.get(questionNum-1).toLatexFormat() + "\\\\\n");
             if (solution) {
-                pw.write("\t\t\t$" + problems.get(questionNum-1).getAnswerLatex() + "$\\\\\n");
+                pw.write("\t\t\t" + problems.get(questionNum-1).getAnswerLatex() + "\\\\\n");
             }
             pw.write("\t\t\t\\vfill\n");
         }
